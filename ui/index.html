@@ -1,69 +1,68 @@
-<!doctype html>
-<html lang="en" class=" js no-touch csstransitions"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <title>HARMA</title>
-    <!-- Slider CSS -->
-    <link href="/ui/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,700" rel="stylesheet" type="text/css">
-    
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="vendor/materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="assets/css/style-team.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
-    
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HARMA</title>
+        <link rel="stylesheet" type="text/css" href="HARMA_v4_CSS_Standard.css">
+        <link rel="stylesheet" type="text/css" href="HARMA_v4_CSS_NavBarBigScreen.css">
+        <link rel="stylesheet" type="text/css" href="HARMA_v4_CSS_NavBarSmallScreen.css">
+        <link rel="stylesheet" type="text/css" href="HARMA_v4_CSS_HeaderImage.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
     <body>
-        <nav class="nav-extended z-depth-0 blue-grey darken-2" role="navigation">
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo white-text"> <img class="logo left" src="assets/img/logoWhite.png"><span>KMUN 2017</span></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="white-text" href="//kmun.in/team.html">TEAM</a></li>
-                    <li><a class="white-text" href="//press.kmun.in">PRESS</a></li>
-                    <li><a class="white-text" href="#contact">CONTACT</a></li>
-                    <li><a class="white-text" href="//web.kmun.in">LOGIN</a></li>
-                </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a> </div>
-            <div class="nav-background">
-                <div class="ea k" style="background-image:url('assets/img/lander.jpg')"></div>
-            </div>
-            <div class="nav-header">
-                <div class="section no-pad-bot">
-                    <div class="container">
-                        <br>
-                        <br>
-                        <h3 class="header center yellow-text text-lighten-2">KUMARANS MODEL UNITED NATIONS | 2017</h3>
-                        <div class="row center">
-                            <h5 class="header col s12 light" id="timer">0 Days 11 Hours 19 Minutes 44 Seconds </h5> </div>
-                        <div class="row center"> <a type="button" onclick="Materialize.toast('Registrations are closed. Please click Login to see your registration status', 4000)" id="download-button" class="btn-large waves-effect waves-dark yellow lighten black-text">Registrations are Closed</a> </div>
-                        <h6></h6>
-                        <br>
-                        <br> </div>
+        <div id="NavigationBar">
+            <nav class="big-screen">
+                <ul class="topnav-name">
+                    <li><a class="nav-space"></a></li>
+                    <li><a class="nav-name" href="#">HARMA</a></li>
+                </ul>
+                
+                <ul class="topnav">
+                    <li><a class="nav-space"></a></li>
+                    <li><a class="nav-button" href="#">Login</a></li>
+                    <li><a class="nav-button" href="#">Contact Us</a></li>
+                    <li><a class="nav-button" href="#">Home</a></li>
+                    <li><a class="nav-space"></a></li>
+                </ul>
+            </nav>
+
+            <nav id="small-screen">
+                <div class="smallscreen-topnav-namepanel">
+                    <a class="smallscreen-topnav-name" href="#">HARMA</a>
                 </div>
-            </div>
-            <!-- FIXME: Make Tabs stick and change color -->
-            <div id="wrap">
-                <div data-target="wrap" class=" pushpin-tabs">
-                    <div class="nav-content container">
-                        <ul class="tabs tabs-transparent">
-                            <li class="tab"><a href="#about" class="active">ABOUT</a></li>
-                            <li class="tab"><a href="#committees">COMMITTEES</a></li>
-                            <li class="tab"><a href="#cal">PREP</a></li>
-                            <!--<li class="tab"><a href="#team">TEAM</a></li>-->
-                        <div class="indicator" style="right: 412px; left: 0px;"></div></ul>
-                    </div>
+
+                <button class="smallscreen-topnav">Menu</button>
+                <div class="smallscreen-topnav-panel">
+                    <a class="smallscreen-topnav-button" href="#">Home</a>
+                    <a class="smallscreen-topnav-button" href="#">Contact Us</a>
+                    <a class="smallscreen-topnav-button" href="#">Login</a>
                 </div>
-            </div>
-        </nav>
-        
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
+            </nav>
         </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am your webapp.
+
+        <div class="header-container header-image-holder header-image">
+            <h1>HARMA</h1>
+            <h2>Healthcare Analytics Readiness Maturity Assessment</h2>      
         </div>
-        <script type="text/javascript" src="/ui/main.js">
+
+        <script>
+            var acc = document.getElementsByClassName("smallscreen-topnav");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } 
+                
+                else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            }
+        }
         </script>
     </body>
 </html>
