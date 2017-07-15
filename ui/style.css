@@ -272,6 +272,6 @@ div.smallscreen-topnav-panel a.smallscreen-topnav-button:hover:not(.active) {
 
 @media screen and (min-width: 300px){
     html{
-		display: none;
+		overflow: auto;
 	}
 }
