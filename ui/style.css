@@ -204,7 +204,6 @@ button.smallscreen-topnav-menubutton:after {
 /*End of CSS properties for Menu Button*/
 
 div.smallscreen-topnav-menupanel {
-    padding: 0 18px;
     background-color: white;
     max-height: 0;/**/
     overflow: hidden;
