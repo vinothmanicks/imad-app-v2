@@ -210,6 +210,10 @@ div.smallscreen-topnav-menupanel {
     overflow: hidden;
     margin: 48px 0 0px 0;/**/
     transition: max-height 0.2s ease-out;
+    position: fixed; 
+/*    top: 0;/**/ 
+    width: 100%;
+    z-index: 1;
 }
 
 div.smallscreen-topnav-menupanel a.smallscreen-topnav-button {
